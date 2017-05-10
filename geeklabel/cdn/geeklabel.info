@@ -1,0 +1,42 @@
+name = Geek label
+description = Bootstrap extended theme.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[home_banner]    = 'Home Banner'
+regions[sections]       = 'Sections'
+regions[services]       = 'Services'
+regions[clients1]       = 'Clients 1'
+regions[clients2]       = 'Clients 2'
+regions[contact]        = 'Contact'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/owl.carousel.css
+stylesheets[all][] = css/animate.css
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+/*******************************************
+ Stylesheet: Mixins & Constants Stylesheet
+*******************************************/
+
+/*********************
+TYPOGRAPHY
+*********************/
+@font-face {
+  font-family: 'Museo300';
+  src: url('../fonts/museo-300.eot');
+  src: url('../fonts/museo-300.eot') format('embedded-opentype'),
+       url('../fonts/museo-300.woff2') format('woff2'),
+       url('../fonts/museo-300.woff') format('woff'),
+       url('../fonts/museo-300.ttf') format('truetype'),
+       url('../fonts/museo-300.svg#Museo300') format('svg');
+}
+@font-face {
+    font-family: 'MuseoSansCyrl_0';
+    src: url('../fonts/MuseoSansCyrl_0.eot');
+    src: url('../fonts/MuseoSansCyrl_0.eot') format('embedded-opentype'),
+         url('../fonts/MuseoSansCyrl_0.woff2') format('woff2'),
+         url('../fonts/MuseoSansCyrl_0.woff') format('woff'),
+         url('../fonts/MuseoSansCyrl_0.ttf') format('truetype'),
+         url('../fonts/MuseoSansCyrl_0.svg#MuseoSansCyrl_0') format('svg');
+}
+/*********************
+TRANSITION
+*********************/
+@mixin transition($transition...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit", "-ms", "-o",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+
+  transition: $transition;
+}
+
+/*********************
+Clearfix
+*********************/
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*********************
+Transform
+*********************/
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+}
+@mixin scale3d($x, $y, $z) {
+   @include transform(scale3d($x, $y, $z));
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {@content; }
+  @-moz-keyframes #{$name} {@content;}
+  @-ms-keyframes #{$name} {@content;}
+  @keyframes #{$name} {@content;}
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+}
+
+/*********************
+FLEXBOX
+*********************/
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+%flexbox { @include flexbox; }

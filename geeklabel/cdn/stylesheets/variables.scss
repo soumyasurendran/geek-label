@@ -1,0 +1,50 @@
+/* ===============
+ Global Variable
+================= */
+
+//Typography
+$font-family-base: 	'MuseoSansCyrl_0';
+$font-family-museo:	'Museo300';
+
+$font-weight-normal: normal;
+$font-weight-h2:	500;
+$font-weight-h1:	600;
+
+//Font Size
+$font-size-base:	30px;
+$font-size-h1: 		56px;
+$font-size-h2: 		25px;
+$font-size-input:	18px;
+$font-size-btn:		20px;
+$font-size-h4: 		15px;
+$font-size-map:		12px;
+$font-size-h1-sm: 	40px;
+
+//Font Align
+$text-center: center;
+
+// Border Radius
+$border-radius-base: 2px;
+$border-radius-small: 3px;
+$border-radius-full: 100%;
+
+// Colors 
+$white: #ffffff;
+$gray: 	#f1f2f2;
+$jet: 	#414042;
+$primary-color:#d83454;
+$off-white: #fbfbfb;
+$darkGray: #cccccc;
+
+//Box Shadow
+$box-shadow-btn: 0 0 6px rgba(0,0,0,0.2);
+$box-shadow-icon: 0 0 0 10px rgba($primary-color,0.4);
+$box-shadow-map-inside: 0 8px 10px rgba(0, 0, 0, 0.1);
+$box-shadow-map-inside2: 0 -8px 10px rgba(0, 0, 0, 0.1);
+
+//Media Query
+$break-small: 479px;
+$break-medium: 767px;
+$break-xmedium: 991px;
+$break-large: 1199px;
+$screen-min-medium: $break-medium + 1;
